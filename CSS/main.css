@@ -2733,3 +2733,12 @@ section {
 .footer .credits a {
   color: #fff;
 }
+.chatbot{
+  position: fixed;
+  right: 4px;
+  bottom: 2px;
+ 
+}
+.chatbot img{
+  height: 90px;
+}
