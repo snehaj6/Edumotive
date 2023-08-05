@@ -1,8 +1,14 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Montserrat", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
+}
+
 body {
     color: #222222;
     background: #00b6a1;
     height: 100%;
-    font-family: 'Ubuntu';
+    font-family: var(--font-default);
 }
 .heading-color{
     color: #f85a40;
