@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduMotive - Donation Form</title>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="donation.css">
+  <link href="CSS/main.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="Images/logo_wbg.png" alt="">
+            <h1>Edu<span>M</span>otive</h1>
+          </a>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="event.html">Events</a></li>
+              <li><a href="library/index.html">Library</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="donation.html" target="_blank">Donate</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><button type="button" name="button" class="btn">
+                <style media="screen">
+                  .btn {
+                    background: #3498db;
+                      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+                      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+                      -webkit-border-radius: 29;
+                      -moz-border-radius: 29;
+                      border-radius: 29px;
+                      font-family: Arial;
+                      color: #ffffff;
+                      font-size: 20px;
+                      padding: 10px 20px 10px 20px;
+                      text-decoration: none;
+                    }
+    
+                    .btn:hover {
+                      background: #3cb0fd;
+                      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+                      text-decoration: none;
+                    }
+
+
+                  </style>
+    
+                  <a href="signin.html">Sign In</a>
+                </button></li>
+            </ul>
+          </nav><!-- .navbar -->
+    
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+        </div>
+      </header><!-- End Header -->
+      <!-- End Header -->
+
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mt-3 donation donation-element">
+            <img src="Images/logo_wbg.png" alt="Logo" style="max-width: 20%; height: auto; border-radius: 50%;"> 
+            <h3>Edu<span class="heading-color">M</span>otive</h3>
+            <h2 class="donation-heading">Donate now and be a catalyst for change!</h2>
+            <p class="donation-content">
+              As an organization dedicated to transforming lives, we seek your support in providing education to underprivileged students from impoverished backgrounds. Your generous donation will help us offer educational materials and tutoring services, empowering these young minds for a brighter future.
+            </p>
+            <p class="donation-content">
+              Together, we can break the cycle of poverty and open doors of opportunity. Your contribution, no matter the amount, will create a lasting impact on their lives. Join us to make a difference!!
+            </p>
+        </div>
+      <!-- Donation Form Column -->
+      <div class="col-md-6 p-4 custom donation-element">
+        <h2 class="mb-4 donation-heading-2">Donate Now!!</h2>
+        <form>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+          </div>
+
+          <div class="form-group">
+            <label for="amount">Donation Amount (INR)</label>
+            <input type="number" class="form-control" id="amount" placeholder="Enter donation amount" min="1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="payment-method">Payment Method</label>
+            <select class="form-control" id="payment-method" required>
+              <option value="">Select a payment method</option>
+              <option value="credit-card">Credit Card</option>
+              <option value="paypal">Paytm</option>
+              <!-- Add more payment options if needed -->
+            </select>
+          </div>
+
+          <button type="submit" class="btn donation-btn">Donate</button>
+
+          
+        </form>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="container">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-info">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>EduMotive</span>
+          </a>
+          <p>An educated individual is more capable of navigating through hard times and contributing to the growth of society. Quality education helps children realise their maximum potential and attain financial independence. Every child must have access to quality education.</p>
+          <div class="social-links d-flex mt-4">
+            <a href="https://twitter.com/i/flow/login" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.facebook.com/campaign/landing.php?campaign_id=14884913640&extra_1=s%7Cc%7C589460569891%7Cb%7Cfacebook%20signin%7C&placement=&creative=589460569891&keyword=facebook%20signin&partner_id=googlesem&extra_2=campaignid%3D14884913640%26adgroupid%3D128696221832%26matchtype%3Db%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-3821998899%26loc_physical_ms%3D9061709%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAjwzY2bBhB6EiwAPpUpZirfHxcVF0FQM-lBPAiWNaDMKGsZpV8XtfvPR80suMoGbdNflKLH2BoCxDoQAvD_BwE" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/login" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="colab.html">Collaborations and Partnerships</a></li>
+            <!-- <li><a href="#">Terms of service</a></li> -->
+          </ul>
+        </div>
+
+        <!-- <div class="col-lg-2 col-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Web Design</a></li>
+            <li><a href="#">Web Development</a></li>
+            <li><a href="#">Product Management</a></li>
+            <li><a href="#">Marketing</a></li>
+            <li><a href="#">Graphic Design</a></li>
+          </ul> -->
+      </div>
+
+      <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+        <h4>Contact Us</h4>
+        <p>
+          A108 Pathway Apartments <br>
+          New Delhi, Delhi 110021<br>
+          India <br><br>
+          <strong>Phone:</strong> +91 9711089508<br>
+          <strong>Email:</strong> Edumotive@gmail.com<br>
+        </p>
+
+      </div>
+
+    </div>
+    </div>
+
+    <div class="container mt-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>EduMotive</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/impact-bootstrap-business-website-template/ -->
+        Designed by EduMotive
+      </div>
+    </div>
+
+  </footer><!-- End Footer -->
+  <!-- End Footer -->
+</body>
+
+</html>

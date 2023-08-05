@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduMotive - Feedback</title>
+    <!--Bootstrap link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  
+  <!--Favicon Linking-->
+  <link rel="apple-touch-icon" sizes="57x57" href="Images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="Images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="Images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="Images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="Images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="Images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="Images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="Images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="Images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="Images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="Images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="Images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="Images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="Images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--Social media links-->
+  <script src="https://kit.fontawesome.com/1b2f2592b4.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="CSS/main.css">
+  
+  <style>
+        .body{background-color: #00b6a1}
+        
+.container{
+  max-width: 600px;
+  background: #fff;
+  width: 800px;
+  margin-top: 30px;
+  padding: 30px 40px 10px 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown{
+    margin-top: 2px;
+    padding: 5px;
+    color: rgb(177, 177, 177);
+}
+.container .text{
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  background: -webkit-linear-gradient(right, #008374, #63bbb1, #008374, #f5f1f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.container form{
+  padding: 30px 0 0 0;
+}
+.container form .form-row{
+  display: flex;
+  margin: 32px 0;
+}
+form .form-row .input-data{
+  width: 100%;
+  height: 40px;
+  margin: 0 20px;
+  position: relative;
+}
+form .form-row .textarea{
+  height: 70px;
+}
+.input-data input,
+.textarea textarea{
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+}
+.input-data input:focus ~ label, .textarea textarea:focus ~ label,
+.input-data input:valid ~ label, .textarea textarea:valid ~ label{
+  transform: translateY(-20px);
+  font-size: 14px;
+  color: #00b6a1;
+}
+.textarea textarea{
+  resize: none;
+  padding-top: 10px;
+}
+.input-data label{
+  position: absolute;
+  pointer-events: none;
+  bottom: 25px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+.textarea label{
+  width: 100%;
+  bottom: 40px;
+  background: #fff;
+}
+.input-data .underline{
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.input-data .underline:before{
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: #00b6a1;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+}
+.input-data input:focus ~ .underline:before,
+.input-data input:valid ~ .underline:before,
+.textarea textarea:focus ~ .underline:before,
+.textarea textarea:valid ~ .underline:before{
+  transform: scale(1);
+}
+.submit-btn .input-data{
+  overflow: hidden;
+  height: 45px!important;
+  width: 25%!important;
+}
+.submit-btn .input-data .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  background: -webkit-linear-gradient(right, #00b6a1, #008374,#00b6a1, #008374);
+  transition: all 0.4s;
+}
+.submit-btn .input-data:hover .inner{
+  left: 0;
+}
+.submit-btn .input-data input{
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .container .text{
+    font-size: 30px;
+  }
+  .container form{
+    padding: 10px 0 0 0;
+  }
+  .container form .form-row{
+    display: block;
+  }
+  form .form-row .input-data{
+    margin: 35px 0!important;
+  }
+  .submit-btn .input-data{
+    width: 40%!important;
+  }
+}
+
+.footer{
+    margin-top: 2rem;
+    font-size: 14px;
+    background-color:  rgba(0, 131, 116, 0.8);
+    padding: 50px 0;
+    color: white;
+}
+  .footer .footer-info .logo {
+    line-height: 0;
+    margin-bottom: 25px;
+  }
+  
+  .footer .footer-info .logo img {
+    max-height: 40px;
+    margin-right: 6px;
+  }
+  
+  .footer .footer-info .logo span {
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: var(--font-primary);
+  }
+  
+  .footer .footer-info p {
+    font-size: 14px;
+    font-family: var(--font-primary);
+  }
+  
+  .footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 10px;
+    transition: 0.3s;
+  }
+  
+
+  .footer h4 {
+    font-size: 16px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 12px;
+    text-align: left;
+
+  }
+  
+  .footer .footer-links {
+    margin-bottom: 30px;
+  }
+  
+  .footer .footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer .footer-links ul i {
+    padding-right: 2px;
+    color: rgba(0, 131, 116, 0.8);
+    font-size: 12px;
+    line-height: 0;
+  }
+  
+  .footer .footer-links ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer .footer-links ul li:first-child {
+    padding-top: 0;
+  }
+  
+  .footer .footer-links ul a {
+    color: rgba(255, 255, 255, 0.7);
+    transition: 0.3s;
+    display: inline-block;
+    line-height: 1;
+  }
+  
+  .footer .footer-contact p {
+    line-height: 26px;
+    text-align: left;
+  }
+  
+  .footer .copyright {
+    text-align: center;
+  }
+  
+  .footer .credits {
+    padding-top: 4px;
+    text-align: center;
+    font-size: 13px;
+  }
+  
+  .footer .credits a {
+    color: #cfd1d8;
+  }
+
+  </style>
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <img src="Images/logo_wbg.png" alt="">
+            <h1>Edu<span>M</span>otive</h1>
+          </a>
+          <nav id="navbar" class="navbar">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="event.html">Events</a></li>
+              <li><a href="library/index.html">Library</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="donation.html" target="_blank">Donate</a></li>
+              <li><a href="feedback.html">Feedback</a></li>
+              <li><button type="button" name="button" class="btn">
+                <style media="screen">
+                  .btn {
+                    background: #3498db;
+                      background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+                      background-image: -o-linear-gradient(top, #3498db, #2980b9);
+                      background-image: linear-gradient(to bottom, #3498db, #2980b9);
+                      -webkit-border-radius: 29;
+                      -moz-border-radius: 29;
+                      border-radius: 29px;
+                      font-family: Arial;
+                      color: #ffffff;
+                      font-size: 20px;
+                      padding: 10px 20px 10px 20px;
+                      text-decoration: none;
+                    }
+    
+                    .btn:hover {
+                      background: #3cb0fd;
+                      background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+                      background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+                      text-decoration: none;
+                    }
+
+
+                  </style>
+    
+                  <a href="signin.html">Sign In</a>
+                </button></li>
+            </ul>
+          </nav><!-- .navbar -->
+    
+          <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+          <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    
+        </div>
+      </header><!-- End Header -->
+      <!-- End Header -->
+    
+  <div class="container">
+        <div class="text">Share Your Suggestions</div>
+        <form>
+              <div class="form-row">
+
+                <div class="input-data">
+                <input type="text" required />
+                <div class="underline"></div>
+                <label for="">First Name</label>
+                </div>
+
+                <div class="input-data">
+                    <input type="text" required>
+                    <div class="underline"></div>
+                    <label for="">Last Name</label>
+                 </div>
+            </div>
+
+
+            <div class="form-row">
+                <div class="input-data">
+                   <input type="text" required>
+                   <div class="underline"></div>
+                   <label for="">Email Address</label>
+                </div>
+
+                <div class="input-data">
+                    <div class="underline"></div>
+                    <br>
+                 <select class="dropdown">
+                    <option value="">Rate Us</option>
+                    <option value="job_inquiry">⭐</option>
+                    <option value="complaint">⭐⭐</option>
+                    <option value="complaint">⭐⭐⭐</option>
+                    <option value="complaint">⭐⭐⭐⭐</option>
+                    <option value="complaint">⭐⭐⭐⭐⭐</option>
+                    </select>
+              
+                </div>
+            </div>
+
+
+        <div class="form-row">
+                <div class="input-data textarea">
+                   <textarea rows="8" cols="80" required></textarea>
+                   <br />
+                   <div class="underline"></div>
+                   <label for="">Write your message</label>
+                 </div>
+                 </div>
+    
+                   <div class="form-row submit-btn">
+                      <div class="input-data">
+                         <div class="inner"></div>
+                         <input type="submit" value="submit">
+                      </div>
+                   </div>
+                </div>
+            
+          </form>
+       </div>
+       
+
+       <footer id="footer" class="footer">
+
+        <div class="containers" style="margin-left: 10px">
+          <div class="row gy-4">
+            <div class="col-lg-5 col-md-12 footer-info">
+              <a href="index.html" class="logo d-flex align-items-center">
+                <span>EduMotive</span>
+              </a>
+              <p>With your help and support, we will be able to educate every last child of our nation! Your contribution has the power to change the course of a child’s life.</p>
+              <div class="social-links d-flex mt-4">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+    
+            <div class="col-lg-2 col-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="colab.html">Collaborations and Partnerships</a></li>
+                <!-- <li><a href="#">Terms of service</a></li> -->
+                <!-- <li><a href="#">Privacy policy</a></li> -->
+              </ul>
+            </div>
+    
+            <!-- <div class="col-lg-2 col-6 footer-links">
+              <h4>Our Services</h4>
+              <ul>
+                <li><a href="#">Web Design</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">Product Management</a></li>
+                <li><a href="#">Marketing</a></li>
+                <li><a href="#">Graphic Design</a></li>
+              </ul> -->
+          </div>
+    
+          <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+            <h4>Contact Us</h4>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +91 9711089508<br>
+              <strong>Email:</strong> Edumotive@gmail.com<br>
+            </p>
+    
+          </div>
+    
+        </div>
+        </div>
+    
+        <div class="containers mt-4">
+          <div class="copyright">
+            &copy; Copyright <strong><span>EduMotive</span></strong>. All Rights Reserved
+          </div>
+          <div class="credits">
+            Designed by EduMotive
+          </div>
+        </div>
+    
+      </footer><!-- End Footer -->
+      <!-- End Footer -->
+    
+    
+     </body>
+  </html>
+        <!-- <script>
+        function auth()
+        {
+          document.getElementById("submit").alert("Form Submitted Successfully");
+          window.location.assign("index.html");
+        }
+
+        </script> -->
