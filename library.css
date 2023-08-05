@@ -211,7 +211,7 @@ h2{
 }
 nav{
     background-color: rgba(0, 131, 116, 0.8);
-    font-family: 'Ubuntu';
+    font-family:  var(--font-primary);
  }
  .heading-navi{
     margin-left: 0.5rem;
