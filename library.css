@@ -10,6 +10,9 @@ body {
     height: 100%;
     font-family: var(--font-default);
 }
+h1, {
+  font-family: var(--font-primary);
+}
 .heading-color{
     color: #f85a40;
 }
